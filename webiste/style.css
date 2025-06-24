@@ -1,0 +1,90 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #000; /* black background */
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.login-box {
+  background: rgba(30, 30, 30, 0.95);
+  padding: 30px;
+  border-radius: 12px;
+  width: 320px;
+  box-shadow: 0 0 10px rgba(255, 165, 0, 0.3);
+  text-align: center;
+}
+
+.logo {
+  color: orange;
+  margin-bottom: 5px;
+  font-size: 22px;
+}
+
+.logo span {
+  color: #fff;
+  font-size: 14px;
+  display: block;
+}
+
+h2 {
+  margin-top: 10px;
+  font-size: 20px;
+}
+
+.subtext {
+  font-size: 13px;
+  margin-bottom: 20px;
+  color: #ccc;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-align: left;
+}
+
+form label {
+  font-size: 13px;
+  margin-bottom: 2px;
+}
+
+form input {
+  padding: 8px;
+  border: none;
+  border-radius: 4px;
+  background: #444;
+  color: white;
+}
+
+button {
+  margin-top: 10px;
+  padding: 10px;
+  background-color: orange;
+  color: black;
+  font-weight: bold;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.footer {
+  margin-top: 20px;
+  font-size: 13px;
+  color: #ccc;
+}
+
+.footer a {
+  color: orange;
+  text-decoration: none;
+}
+
+.forgot {
+  display: block;
+  margin-top: 8px;
+  font-size: 12px;
+}

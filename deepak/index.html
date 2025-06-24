@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="file1.js" defer></script>
+    <title>Domino's Pizza - Order Pizza Online for Delivery</title>
+   
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="nav-container">
+            <a href="#" class="logo">DOMINO'S Pizza</a>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="#menu">Menu</a></li>
+                    <li><a href="#deals">Coupons & Deals</a></li>
+                    <li><a href="#stores">Store Locator</a></li>
+                    <li><a href="#tracker">Tracker</a></li>
+                </ul>
+            </nav>
+            <div class="nav-actions">
+                <button class="cart-btn" onclick="toggleCart()">
+                    🛒
+                    <span class="cart-count" id="cartCount">0</span>
+                </button>
+                <button class="user-btn">👤</button>
+                <button class="mobile-menu">☰</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1>Get Your Favorite Pizza Delivered Hot & Fresh</h1>
+                <p>Order online from your local Domino's for fast delivery or carryout. Choose from our delicious menu of pizzas, chicken, sandwiches, and more!</p>
+                <div class="hero-actions">
+                    <a href="#menu" class="btn btn-primary">Order Now</a>
+                    <a href="#stores" class="btn btn-secondary">Find Store</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" alt="Delicious pepperoni pizza">
+                <div class="offer-badge">50% OFF</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Promotional Banner -->
+    <section class="promo-banner">
+        <div class="container">
+            <p>🔥 Limited Time: 2 Medium Pizzas for $12.99 Each - Order Now! 🔥</p>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section class="menu-section" id="menu">
+        <div class="container">
+            <h2 class="section-title">Our Menu</h2>
+            <div class="category-tabs">
+                <button class="category-tab active" onclick="filterCategory('pizzas')">Pizzas</button>
+                <button class="category-tab" onclick="filterCategory('chicken')">Chicken & Wings</button>
+                <button class="category-tab" onclick="filterCategory('sandwiches')">Sandwiches</button>
+                <button class="category-tab" onclick="filterCategory('sides')">Sides</button>
+                <button class="category-tab" onclick="filterCategory('desserts')">Desserts</button>
+            </div>
+            <div class="pizza-grid" id="pizzaGrid">
+                <!-- Pizza cards will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section">
+        <div class="container">
+            <h2 class="section-title">Why Choose Domino's?</h2>
+            <div class="features-grid">
+                <div class="feature">
+                    <div class="feature-icon red">⏰</div>
+                    <h3>30-Minute Delivery</h3>
+                    <p>Hot, fresh pizza delivered to your door in 30 minutes or less</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon blue">📱</div>
+                    <h3>Order Tracking</h3>
+                    <p>Track your order from the oven to your door with our app</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon red">⭐</div>
+                    <h3>Quality Guarantee</h3>
+                    <p>If you're not satisfied, we'll make it right or refund your money</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Store Locator -->
+    <section class="store-locator" id="stores">
+        <div class="container">
+            <h2 class="section-title">Find a Store Near You</h2>
+            <div class="locator-container">
+                <div>
+                    <div class="locator-form">
+                        <div class="form-group">
+                            <label for="address">Enter your address</label>
+                            <input type="text" id="address" placeholder="Street address, city, state, or ZIP">
+                        </div>
+                        <button class="btn btn-primary" onclick="findStores()">Find Stores</button>
+                    </div>
+                    <div class="store-results" id="storeResults"></div>
+                </div>
+                <div class="map-placeholder">
+                    <div>🗺️</div>
+                    <p>Interactive Store Map</p>
+                    <p style="font-size: 14px;">Map integration coming soon</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>DOMINO'S</h3>
+                <p style="color: #ccc; margin-bottom: 15px;">The world's largest pizza delivery company</p>
+                <div class="social-icons">
+                    <a href="#" class="social-icon">📘</a>
+                    <a href="#" class="social-icon">🐦</a>
+                    <a href="#" class="social-icon">📷</a>
+                    <a href="#" class="social-icon">📺</a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Customer Service</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Order Tracker</a></li>
+                    <li><a href="#">Store Locator</a></li>
+                    <li><a href="#">Gift Cards</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>About Domino's</h4>
+                <ul class="footer-links">
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Franchise</a></li>
+                    <li><a href="#">Investor Relations</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Legal</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Use</a></li>
+                    <li><a href="#">Nutritional Info</a></li>
+                    <li><a href="#">Allergen Info</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Domino's Pizza LLC. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Cart Overlay -->
+    <div class="cart-overlay-backdrop" id="cartBackdrop" onclick="toggleCart()"></div>
+    <div class="cart-overlay" id="cartOverlay">
+        <div class="cart-header">
+            <h3 class="cart-title">Your Cart</h3>
+            <button class="close-cart" onclick="toggleCart()">×</button>
+        </div>
+        <div class="cart-content" id="cartContent">
+            <div class="cart-empty">
+                <p>Your cart is empty</p>
+                <p style="font-size: 14px; color: #999;">Add some delicious pizzas to get started!</p>
+            </div>
+        </div>
+        <div class="cart-footer" id="cartFooter" style="display: none;">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span class="total-price" id="totalPrice">$0.00</span>
+            </div>
+            <button class="checkout-btn">Checkout</button>
+        </div>
+    </div>
+</body>
+</html>
